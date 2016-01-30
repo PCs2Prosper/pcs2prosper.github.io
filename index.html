@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PCs2Prosper</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="public/style.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="public/syntax.css" media="screen" charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <div id="header-overlay"></div>
+        <span id="logo"></span>
+
+        <div id="menu">
+            <a href="#mission" class="menu-item">Mission</a>
+            <a href="#donate" class="menu-item">Donate</a>
+            <a href="#team" class="menu-item">Team</a>
+            <a href="#contact" class="menu-item">Contact</a>
+        </div>
+
+        <span id="more">
+        <a href="#mission"><i class="material-icons">expand_more</i></a>
+      </span>
+    </header>
+
+    <section id="content">
+        <h1 id="mission">Our Mission</h1>
+        <p>
+            We do things to computers (specifically PCs).
+        </p>
+    </section>
+
+    <section id="content">
+        <h1 id="donate">Donate ALL the PCs</h1>
+        <p>
+            Please.
+        </p>
+    </section>
+
+    <section id="content">
+        <h1 id="team">Team</h1>
+        <p>
+            We're some handsome folks.
+        </p>
+    </section>
+
+    <section id="content">
+        <h1 id="contact">Got <strike>Milk</strike> Questions?</h1>
+        <p>
+            Hit us up!
+        </p>
+    </section>
+
+    <script src="public/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
